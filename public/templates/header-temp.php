@@ -34,8 +34,8 @@
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <title>MPK - Решітчастий настил для промислового та приватного використання</title>
-        <meta name="description" content="У нашому асортименті представлені різні види ґрат. Ми пропонуємо пресовані та зварені грати з антикорозійним покриттям, включаючи гаряче цинкування.">
+        <title><?= $page['info']['title']; ?></title>
+        <meta name="description" content="<?= $page['info']['description']; ?>">
         <meta name="keywords" content="решітчастий настил, зварний настил, пресований настил, сходи з настилу, металевий настил, настил для промисловості, настил для приватного використання, сталевий решітчастий настил, алюмінієвий решітчастий настил, нержавіючий решітчастий настил, настили для террас, решетчатый настил, сварной настил, прессованный настил, лестницы из настила, металлический настил, настил для промышленности, настил для частного использования, стальной решетчатый настил, алюминиевый решетчатый настил, нержавеющий решетчатый настил, настилы для террас">
         <meta content="" name="description">
         <meta content="" name="keywords">
@@ -80,9 +80,11 @@
                 <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
                 <nav id="navbar" class="navbar">
                     <ul>
-                        <li><a href="/" class="active">Головна</a></li>
-                        <li><a href="/gallery">Галерея</a></li>
-                        <li><a href="/contact">Контакти</a></li>
+                        <?php foreach ($page['all'] as $page): ?>
+                            <li><a href="/" class="active">Головна</a></li>
+                            <li><a href="/gallery">Галерея</a></li>
+                            <li><a href="/contact">Контакти</a></li>
+                        <?php endforeach; ?>
                     </ul>
                 </nav>
                 <!-- .navbar -->
