@@ -4,11 +4,12 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6 text-center">
-                    <h2 data-aos="fade-down"><span>ООО "ГР-МЕТАЛ КОНСТРУКТ" </span>ВИРОБНИЦТВО РЕШІТЧАСТОГО НАСТИЛУ</h2>
+                    <!-- <h2 data-aos="fade-down"><span>ООО "ГР-МЕТАЛ КОНСТРУКТ" </span>ВИРОБНИЦТВО РЕШІТЧАСТОГО НАСТИЛУ</h2> -->
+                    <h1 data-aos="fade-down">РЕШІТЧАСТИЙ НАСТИЛ НА ЗАМОВЛЕННЯ</h1>
                     <p data-aos="fade-up">У нашому асортименті представлені різні види ґрат.
                         Ми пропонуємо пресовані та зварені грати з антикорозійним покриттям,
                         включаючи гаряче цинкування. По всім питанням телефонуйте за номером: <a href="tel:+380982709669">+38 (098) 270-96-69</a></p>
-                    <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started">Отримати консультацію</a>
+                    <a data-aos="fade-up" data-aos-delay="200" href="#features" class="btn-get-started">Детальніше</a>
                 </div>
             </div>
         </div>
@@ -79,7 +80,7 @@
     <!-- ======= End Order Modal ======= -->
 
     <!-- ======= Get Started Section ======= -->
-    <section id="get-started" class="get-started section-bg">
+    <!-- <section id="get-started" class="get-started section-bg">
         <div class="container">
 
             <div class="row justify-content-between gy-4">
@@ -131,7 +132,7 @@
             </div>
 
         </div>
-    </section>
+    </section> -->
     <!-- End Get Started Section -->
 
     <!-- ======= Features Section ======= -->

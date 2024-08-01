@@ -11,7 +11,7 @@ class PageController
     
     public function getAll()
     {
-        return array_keys($this->pages);
+        return $this->pages;
     }
 
     public static function getCurrent()

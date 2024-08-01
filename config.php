@@ -14,29 +14,40 @@ define('PAGE_404', '404');
 $settings = [
     'pages' => [
         PAGE_INDEX => [
-            'title'       => 'Виробництво решітчастого настилу | MPK',
+            'title'       => 'Виробництво решітчастого настилу',
             'description' => 'У нашому асортименті представлені різні види ґрат. Ми пропонуємо пресовані та зварені грати з антикорозійним покриттям, включаючи гаряче цинкування.',
-            'template'    => PAGE_INDEX . '-temp.php'
-        ],
-        PAGE_CONTACT => [
-            'title'       => 'Контакти | MPK',
-            'description' => '',
-            'template'    => PAGE_CONTACT . '-temp.php'
-        ],
-        PAGE_GALLERY => [
-            'title'       => 'Галерея робіт | MPK',
-            'description' => '',
-            'template'    => PAGE_GALLERY . '-temp.php'
+            'template'    => PAGE_INDEX . '-temp.php',
+            'public'      => true
         ],
         PAGE_404 => [
-            'title'       => 'Помилка 404 | MPK',
+            'title'       => 'Помилка 404',
             'description' => 'Cторінка, яку ви шукаєте, не існує або була переміщена.',
-            'template'    => PAGE_404 . '-temp.php'
+            'template'    => PAGE_404 . '-temp.php',
+            'public'      => false
+        ],
+        PAGE_CONTACT => [
+            'title'       => 'Контакти',
+            'description' => '',
+            'template'    => PAGE_CONTACT . '-temp.php',
+            'public'      => true
+        ],
+        PAGE_GALLERY => [
+            'title'       => 'Галерея робіт',
+            'description' => '',
+            'template'    => PAGE_GALLERY . '-temp.php',
+            'public'      => true
         ],
         'zvarnyi-nastyl' => [
-            'title'       => 'Зварний решітчастий настил | MPK',
+            'title'       => 'Зварний решітчастий настил',
             'description' => '',
-            'template'    => PAGE_404 . 'zvarnyi-nastyl-temp.php'
+            'template'    => 'zvarnyi-nastyl-temp.php',
+            'public'      => true
+        ],
+        'presovanyi-nastyl' => [
+            'title'       => 'Пресований решітчастий настил',
+            'description' => '',
+            'template'    => 'zvarnyi-nastyl-temp.php',
+            'public'      => true
         ]
     ],
     'mail' => [

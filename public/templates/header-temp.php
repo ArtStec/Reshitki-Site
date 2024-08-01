@@ -6,39 +6,41 @@
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZD57HNSTBT"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
-
+            
             function gtag() {
                 dataLayer.push(arguments);
             }
-            gtag('js', new Date());
 
+            gtag('js', new Date());
             gtag('config', 'G-ZD57HNSTBT');
-        </script>
-        <script>
-            gtag('event', 'conversion_event_page_view', {
-            });
-        </script>
-        <script>
+
+            function sendGtagEvent(eventName) {
+                gtag('event', eventName);
+                return false;
+            }
+
             function gtagSendEvent() {
-                gtag('event', 'conversion_event_submit_lead_form', {
-                });
-                return false;
+                return sendGtagEvent(<?= str_replace('_', '_', $page['current']); ?> . '_submit_lead_form');
             }
+
             function gtagClickEvent() {
-                gtag('event', 'conversion_event_outbound_click', {
-                });
-                return false;
+                return sendGtagEvent(<?= str_replace('_', '_', $page['current']); ?> . '_event_outbound_click');
             }
+
+            sendGtagEvent(<?= str_replace('_', '_', $page['current']); ?> . '_event_page_view');
         </script>
 
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-        <title><?= $page['info']['title']; ?></title>
+        <title><?= $page['info']['title'] . ' | MPK'; ?></title>
         <meta name="description" content="<?= $page['info']['description']; ?>">
-        <meta name="keywords" content="решітчастий настил, зварний настил, пресований настил, сходи з настилу, металевий настил, настил для промисловості, настил для приватного використання, сталевий решітчастий настил, алюмінієвий решітчастий настил, нержавіючий решітчастий настил, настили для террас, решетчатый настил, сварной настил, прессованный настил, лестницы из настила, металлический настил, настил для промышленности, настил для частного использования, стальной решетчатый настил, алюминиевый решетчатый настил, нержавеющий решетчатый настил, настилы для террас">
-        <meta content="" name="description">
-        <meta content="" name="keywords">
+        <meta name="keywords" content="настил, решітчастий настил, зварни йрешітчастий настил, пресований настил, сходи з настилу, металевий настил, 
+            настил для промисловості, настил для приватного використання, сталевий решітчастий настил, алюмінієвий решітчастий настил, 
+            нержавіючий решітчастий настил, настили для террас, решетчатый настил, сварной настил, прессованный настил, 
+            лестницы из настила, металлический настил, настил для промышленности, настил для частного использования, стальной решетчатый настил, 
+            алюминиевый решетчатый настил, нержавеющий решетчатый настил, настилы для террас, купити настил, замовити настил, купить настил, заказать настил, 
+            решетки на заказ, решітки на замовлення, настил на замовлення, настил на заказ">
 
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="/<?= PATH_ASSETS; ?>img/apple-touch-icon.png">
@@ -73,17 +75,18 @@
                 <a href="/" class="logo d-flex align-items-center">
                     <!-- Uncomment the line below if you also wish to use an image logo -->
                     <!-- <img src="assets/img/logo.png" alt=""> -->
-                    <h1>MPK<span>.</span></h1>
+                    <div style="font-size: 24px;font-weight: 700;color: #fff;margin-bottom: 0;font-family: var(--font-primary);">MPK<span style="color: var(--color-primary);">.</span></div>
                 </a>
 
                 <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
                 <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
                 <nav id="navbar" class="navbar">
                     <ul>
-                        <?php foreach ($page['all'] as $page): ?>
-                            <li><a href="/" class="active">Головна</a></li>
-                            <li><a href="/gallery">Галерея</a></li>
-                            <li><a href="/contact">Контакти</a></li>
+                        <?php // print_r($page['current']); ?>
+                        <?php foreach ($page['all'] as $key => $data): ?>
+                            <?php if ($data['public']): ?>
+                                <li><a href="/<?= $key;?>" class="<?= ($key === $page['current']) ? 'active' : ''; ?>"><?= ($key === 'index') ? 'Головна' : $data['title']; ?></a></li>
+                            <?php endif; ?>
                         <?php endforeach; ?>
                     </ul>
                 </nav>
