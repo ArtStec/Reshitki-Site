@@ -12,6 +12,11 @@ define('PAGE_GALLERY', 'gallery');
 define('PAGE_404', '404');
 
 $settings = [
+    'site' => [
+        'phone'   => '+380982709669',
+        'email'   => 'contact@reshitki.com',
+        'address' => '04594, Київська обл., с. Княжичі, вул. Слави, 19'
+    ],
     'pages' => [
         PAGE_INDEX => [
             'title'       => 'Виробництво решітчастого настилу',

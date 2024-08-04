@@ -24,9 +24,10 @@ class PageController
 
     public function getParams()
     {
-        $data        = array();
-        $page        = self::getCurrent();
-        $data['all'] = $this->getAll();
+        $data         = array();
+        $page         = self::getCurrent();
+        $data['all']  = $this->getAll();
+        $data['site'] = $this->pages['site'];
 
         if (isset($this->pages[$page])) {
             $data['info']    = $this->pages[$page];
