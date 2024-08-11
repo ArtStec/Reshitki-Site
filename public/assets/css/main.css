@@ -884,6 +884,21 @@ section {
   margin-bottom: 0;
 }
 
+.portfolio-description ul {
+  list-style: none;
+  padding: 0;
+}
+
+.portfolio-description ul li {
+  padding-top: 10px;
+}
+
+.portfolio-description ul i {
+  font-size: 20px;
+  padding-right: 4px;
+  color: var(--color-primary);
+}
+
 /*--------------------------------------------------------------
 # Our Projects Section
 --------------------------------------------------------------*/

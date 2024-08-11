@@ -4,19 +4,19 @@
     <div class="breadcrumbs d-flex align-items-center" style="background-image: url('<?= PATH_ASSETS; ?>img/hero-carousel/header-slide-1.jpg');">
         <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-            <h2>Контакти</h2>
+            <h2><?= $page['info']['title']; ?></h2>
             <ol>
                 <li><a href="/">Головна</a></li>
-                <li>Контакти</li>
+                <li><?= $page['info']['title']; ?></li>
             </ol>
 
         </div>
     </div>
     <!-- End Breadcrumbs -->
-    <?php var_dump($page); ?>
+    <?php //var_dump($page); ?>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="<?= $page['current']; ?>" class="<?= $page['current']; ?>">
         <div class="container" data-aos="fade-up" data-aos-delay="100">
 
             <div class="row gy-4">
@@ -24,7 +24,7 @@
                     <div class="info-item d-flex flex-column justify-content-center align-items-center">
                         <i class="bi bi-map"></i>
                         <h3>Наша Адреса</h3>
-                        <p>04594, Київська обл., с. Княжичі, вул. Слави, 19</p>
+                        <p><?= $page['site']['address']; ?></p>
                     </div>
                 </div>
                 <!-- End Info Item -->
@@ -33,7 +33,7 @@
                     <div class="info-item d-flex flex-column justify-content-center align-items-center">
                         <i class="bi bi-envelope"></i>
                         <h3>Email</h3>
-                        <p><a href="mailto:+contact@reshitki.com">contact@reshitki.com</a></p>
+                        <p><a href="mailto:+<?= $page['site']['email']; ?>"><?= $page['site']['email']; ?></a></p>
                     </div>
                 </div>
                 <!-- End Info Item -->
@@ -42,7 +42,7 @@
                     <div class="info-item d-flex flex-column justify-content-center align-items-center">
                         <i class="bi bi-telephone"></i>
                         <h3>Телефон</h3>
-                        <p><a href="tel:+380982709669">+38 (098) 270-96-69</a></p>
+                        <p><a href="tel:<?= $page['site']['phone']; ?>">+38 (098) 270-96-69</a></p>
                     </div>
                 </div>
                 <!-- End Info Item -->
@@ -59,7 +59,7 @@
 
                 <!-- Contact Form -->
                 <div class="col-lg-6">
-                    <form action="sendMail.php" method="POST" class="php-email-form">
+                    <form action="<?= PATH_APP; ?>main.php" method="POST" class="php-email-form">
                         <h3>Зв'язатися з нами</h3>
                         <p>Заповніть форму нижче, щоб зв'язатися із нашою командою.
                             Ми готові відповісти на всі Ваші запитання та надати необхідну інформацію про наші продукти та послуги.</p>

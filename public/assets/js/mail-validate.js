@@ -21,18 +21,19 @@ jQuery(function($) {
                     thisForm.find('.loading').addClass('d-block');
                     thisForm.find('.error-message').removeClass('d-block');
                     thisForm.find('.sent-message').removeClass('d-block');
-
-                    // Отслеживание успешного события
-                    gtagSendEvent();
                 },
                 success: function (response) {
+                    // Отслеживание успешного события
+                    gtagSendEvent();
                     displaySuccess(thisForm, response);
+                    console.log('Success response' + response);
                 },
                 error: function (error) {
-                    displayError(thisForm, error);
-                    
                     // Отслеживание ошибки
                     gtagSendEvent();
+                    displayError(thisForm, error);
+                    console.log('error');
+                    console.log(error);
                 }
             });
         });

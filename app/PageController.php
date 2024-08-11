@@ -2,16 +2,16 @@
 
 class PageController
 {
-    private $pages;
+    private $settings;
 
-    public function __construct($pages)
+    public function __construct($settings)
     {
-        $this->pages = $pages;
+        $this->settings = $settings;
     }
     
     public function getAll()
     {
-        return $this->pages;
+        return $this->settings['pages'];
     }
 
     public static function getCurrent()
@@ -27,18 +27,18 @@ class PageController
         $data         = array();
         $page         = self::getCurrent();
         $data['all']  = $this->getAll();
-        $data['site'] = $this->pages['site'];
+        $data['site'] = $this->settings['site'];
 
-        if (isset($this->pages[$page])) {
-            $data['info']    = $this->pages[$page];
+        if (isset($this->settings['pages'][$page])) {
+            $data['info']    = $this->settings['pages'][$page];
             $data['current'] = $page;
         } else {
-            $data['info']    = $this->pages[PAGE_404];
+            $data['info']    = $this->settings['pages'][PAGE_404];
             $data['current'] = PAGE_404;
         }
 
         if ($page === '' || $page === PAGE_INDEX) {
-            $data['info']    = $this->pages[PAGE_INDEX];
+            $data['info']    = $this->settings['pages'][PAGE_INDEX];
             $data['current'] = PAGE_INDEX;
         }
 

@@ -35,52 +35,8 @@
 
 <main id="main">
 
-    <!-- ======= Order Modal ======= -->
-    <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="orderModalTitle">Форма швидкого зв'язку</h5>
-                    <a id="closeModal" type="button"><i class="fas fa-times"></i></a>
-                </div>
-                <div class="modal-body">
-                    <form action="sendMail.php" method="POST" class="php-email-form">
-                        <div class="row gy-3">
-                            <p class="mb-0">Будь ласка, залиште ваші контактні дані, щоб ми могли вам допомогти з вашим замовленням та проконсультувати вас щодо обраного товару.</p>
-                            <div class="col-md-12" id="productAlert">
-                                <span class="form-control product-alert-block alert alert-success rounded-0 m-0">
-                                    <i class="fa-solid fa-check"></i> <b></b>
-                                </span>
-                            </div>
-                            <div class="col-md-12">
-                                <input type="text" name="name" class="form-control rounded-0 p-10" placeholder="Ім'я" required>
-                            </div>
-                            <div class="col-md-12">
-                                <input type="text" name="phone" class="form-control phone-mask rounded-0 p-10" placeholder="Телефон" required>
-                            </div>
-                            <div class="col-md-12 d-none">
-                                <input type="textarea" name="product" class="form-control rounded-0 p-10">
-                            </div>
-                            <div class="text-center d-none" id="customLoader">
-                                <div class="lds-dual-ring"></div>
-                            </div>
-                            <div class="col-md-12 d-none" id="alertModal">
-                                <div class="alert alert-danger mb-0 rounded-0" role="alert" style="padding: 12px;"></div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <a id="closeModal" type="button" class="button-back-more">Назад</a>
-                    <a id="submitModal" type="button" class="button-learn-more">Відправити</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ======= End Order Modal ======= -->
-
     <!-- ======= Get Started Section ======= -->
-    <!-- <section id="get-started" class="get-started section-bg">
+    <section id="get-started" class="get-started section-bg">
         <div class="container">
 
             <div class="row justify-content-between gy-4">
@@ -127,12 +83,12 @@
                         </div>
                     </form>
                 </div>
-                <!-- End Quote Form -->
+                <!-- End Quote Form --> 
 
             </div>
 
         </div>
-    </section> -->
+    </section>
     <!-- End Get Started Section -->
 
     <!-- ======= Features Section ======= -->
@@ -192,8 +148,8 @@
                                 з антикорозійним покриттям у вигляді гарячого цинкування. У нашому асортименті представлені високоякісні решітки за найкращими цінами на українському ринку.
                             </p>
                             <ul class="d-inline-flex">
-                                <li class="col-6"><i class="bi bi-check2-all"></i> З антикорозійним покриттям</li>
-                                <li class="col-6"><i class="bi bi-check2-all"></i> Без антикорозійного покриття</li>
+                                <li class="col-6"><i class="bi bi-check-circle"></i> З антикорозійним покриттям</li>
+                                <li class="col-6"><i class="bi bi-check-circle"></i> Без антикорозійного покриття</li>
                             </ul>
 
                             <h2 class="card-title pricing-card-title mb-20">Ціна: від 1100 грн<small class="text-body-secondary fw-light">/м²</small></h2>
@@ -217,8 +173,8 @@
                                 Замовити металеві грати можна за телефоном <a href="tel:+380982709669">+38 (098) 270-96-69</a>
                             </p>
                             <ul class="d-inline-flex">
-                                <li class="col-6"><i class="bi bi-check2-all"></i> З антикорозійним покриттям</li>
-                                <li class="col-6"><i class="bi bi-check2-all"></i> Без антикорозійного покриття</li>
+                                <li class="col-6"><i class="bi bi-check-circle"></i> З антикорозійним покриттям</li>
+                                <li class="col-6"><i class="bi bi-check-circle"></i> Без антикорозійного покриття</li>
                             </ul>
 
                             <h2 class="card-title pricing-card-title mb-20">Ціна: від 1320 грн<small class="text-body-secondary fw-light">/м²</small></h2>
@@ -240,8 +196,8 @@
                                 Використовується в основному до тих металоконструкцій, де є полиця (швеллер, куточок, двотавр, тавр).
                                 Завдяки мінімальному виступу кріплення над поверхнею ґрат на 2 мм. це дає можливість безпечно пересуватися даною конструкцією.</p>
                             <ul class="d-inline-flex">
-                                <li class="col-6"><i class="bi bi-check2-all"></i> З антикорозійним покриттям</li>
-                                <li class="col-6"><i class="bi bi-check2-all"></i> Без антикорозійного покриття</li>
+                                <li class="col-6"><i class="bi bi-check-circle"></i> З антикорозійним покриттям</li>
+                                <li class="col-6"><i class="bi bi-check-circle"></i> Без антикорозійного покриття</li>
                             </ul>
 
                             <button id="orderBtn" class="button-learn-more orderBtn">Замовити</button>
@@ -259,8 +215,8 @@
                             <h3>Кріплення "гак"</h3>
                             <p class="fst-italic">Кріплення "гак" - використовується в тих випадках, коли немає можливості використовувати кріплення "скоба", тобто де немає полиці для кріплення.</p>
                             <ul class="d-inline-flex">
-                                <li class="col-6"><i class="bi bi-check2-all"></i> З антикорозійним покриттям</li>
-                                <li class="col-6"><i class="bi bi-check2-all"></i> Без антикорозійного покриття</li>
+                                <li class="col-6"><i class="bi bi-check-circle"></i> З антикорозійним покриттям</li>
+                                <li class="col-6"><i class="bi bi-check-circle"></i> Без антикорозійного покриття</li>
                             </ul>
 
                             <button id="orderBtn" class="button-learn-more orderBtn">Замовити</button>
@@ -364,8 +320,8 @@
                                 Продумана конструкція дозволяє монтувати сходи без застосування зварювального обладнання.
                             </p>
                             <ul class="d-inline-flex">
-                                <li class="col-6"><i class="bi bi-check2-all"></i> З антикорозійним покриттям</li>
-                                <li class="col-6"><i class="bi bi-check2-all"></i> Без антикорозійного покриття</li>
+                                <li class="col-6"><i class="bi bi-check-circle"></i> З антикорозійним покриттям</li>
+                                <li class="col-6"><i class="bi bi-check-circle"></i> Без антикорозійного покриття</li>
                             </ul>
 
                             <h2 class="card-title pricing-card-title mb-20">Ціна: від 250 грн<small class="text-body-secondary fw-light">/м²</small></h2>

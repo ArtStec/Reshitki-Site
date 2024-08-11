@@ -2,7 +2,11 @@
 jQuery(function($) {
     $(document).ready(function () {
         $('button#orderBtn').click(function (event) {
-            let productTitle = $(this).closest('div').find('h3').text();
+            var productTitle = $(this).closest('div').find('h3').text();
+
+            if (!productTitle) {
+                productTitle = $(this).closest('div.portfolio-description').find('h1').text();
+            }
 
             $('#orderModal').find('#productAlert span b').text(productTitle);
             $('#orderModal').find('input[name="product"]').val(productTitle);

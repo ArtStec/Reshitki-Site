@@ -3,8 +3,8 @@
 
             <div class="footer-legal text-center position-relative mb-20">
                 <div class="row">
-                    <div class="col-lg-6">Адреса: 04594, Київська обл., с. Княжичі, вул. Слави, 19</div>
-                    <div class="col-lg-6">Телефон: <a href="tel:+380982709669">+38 (098) 270-96-69</a></div>
+                    <div class="col-lg-6">Адреса: <?= $page['site']['address']; ?></div>
+                    <div class="col-lg-6">Телефон: <a href="tel:<?= $page['site']['phone']; ?>">+38 (098) 270-96-69</a></div>
                 </div>
             </div>
 

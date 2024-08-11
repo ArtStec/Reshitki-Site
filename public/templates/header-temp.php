@@ -20,14 +20,14 @@
             }
 
             function gtagSendEvent() {
-                return sendGtagEvent(<?= str_replace('_', '_', $page['current']); ?> . '_submit_lead_form');
+                return sendGtagEvent('event_submit_lead_form');
             }
 
             function gtagClickEvent() {
-                return sendGtagEvent(<?= str_replace('_', '_', $page['current']); ?> . '_event_outbound_click');
+                return sendGtagEvent('event_event_outbound_click');
             }
 
-            sendGtagEvent(<?= str_replace('_', '_', $page['current']); ?> . '_event_page_view');
+            sendGtagEvent('event_page_view');
         </script>
 
         <meta charset="utf-8">
@@ -95,3 +95,47 @@
             </div>
         </header>
         <!-- End Header -->
+
+        <!-- ======= Order Modal ======= -->
+        <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="orderModalTitle">Форма швидкого зв'язку</h5>
+                        <a id="closeModal" type="button"><i class="fas fa-times"></i></a>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/<?= PATH_APP; ?>main.php" method="POST" class="php-email-form">
+                            <div class="row gy-3">
+                                <p class="mb-0">Будь ласка, залиште ваші контактні дані, щоб ми могли вам допомогти з вашим замовленням та проконсультувати вас щодо обраного товару.</p>
+                                <div class="col-md-12" id="productAlert">
+                                    <span class="form-control product-alert-block alert alert-success rounded-0 m-0">
+                                        <i class="fa-solid fa-check"></i> <b></b>
+                                    </span>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="text" name="name" class="form-control rounded-0 p-10" placeholder="Ім'я" required>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="text" name="phone" class="form-control phone-mask rounded-0 p-10" placeholder="Телефон" required>
+                                </div>
+                                <div class="col-md-12 d-none">
+                                    <input type="textarea" name="product" class="form-control rounded-0 p-10">
+                                </div>
+                                <div class="text-center d-none" id="customLoader">
+                                    <div class="lds-dual-ring"></div>
+                                </div>
+                                <div class="col-md-12 d-none" id="alertModal">
+                                    <div class="alert alert-danger mb-0 rounded-0" role="alert" style="padding: 12px;"></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <a id="closeModal" type="button" class="button-back-more">Назад</a>
+                        <a id="submitModal" type="button" class="button-learn-more">Відправити</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ======= End Order Modal ======= -->
