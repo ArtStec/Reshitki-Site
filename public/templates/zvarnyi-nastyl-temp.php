@@ -41,7 +41,7 @@
 
                 <div class="col-md-6">
                     <div class="portfolio-description">
-                        <h1>Зварний решітчастий настил</h1>
+                        <span style="font-family: var(--font-primary);font-size: 2.5rem;margin-top: 0;margin-bottom: .5rem;font-weight: 500;line-height: 1.2;">Зварний решітчастий </span><h1 style="display: contents;">настил</h1>
                         <ul>
                             <li><i class="bi bi-1-square-fill"></i> Обрамляюча смуга</li>
                             <li><i class="bi bi-2-square-fill"></i> Несуча смуга</li>
@@ -49,14 +49,13 @@
                         </ul>
                         <div class="testimonial-item mb-0">
                             <p style="padding-bottom: 35px;">
-                                <i class="bi bi-quote quote-icon-left"></i>
+                                <i class="bi bi-info-circle quote-icon-left"></i>
                                 Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
                                 quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                                <i class="bi bi-quote quote-icon-right"></i>
                             </p>
                         </div>
 
-                        <h2 class="card-title pricing-card-title mb-0">Ціна: від 1100 грн<small class="text-body-secondary fw-light">/м²</small></h2>
+                        <h2 class="card-title pricing-card-title mb-0">Ціна: 1199 грн<small class="text-body-secondary fw-light">/м²</small></h2>
 
                         <ul class="d-inline-flex" style="width: -moz-available;">
                             <li class="col-6"><i class="bi bi-check-circle"></i> З антикорозійним покриттям</li>
@@ -75,6 +74,34 @@
                         Цей процес забезпечує міцність та стійкість конструкції, спрощує монтаж та обрізання надлишків. Виробляються ці решітки на німецькому обладнанні 
                         з антикорозійним покриттям у вигляді гарячого цинкування. У нашому асортименті представлені високоякісні решітки за найкращими цінами на українському ринку.
                     </p>
+                </div>
+            </div>
+            
+            <div class="text-center my-3">
+                <h1>Інші товари</h1>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="<?= PATH_ASSETS; ?>img/pressed-grating.jpg" class="card-img-top img-fluid" alt="<?= $page['all']['presovanyi-nastyl']['title']; ?>" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $page['all']['presovanyi-nastyl']['title']; ?></h5>
+                                <div class="text-right">
+                                    <a href="/presovanyi-nastyl" class="btn btn-primary button-learn-more">Детальніше</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="<?= PATH_ASSETS; ?>img/step.jpg" class="card-img-top img-fluid" alt="<?= $page['all']['skhodynky']['title']; ?>" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $page['all']['skhodynky']['title']; ?></h5>
+                                <div class="text-right">
+                                    <a href="/skhodynky" class="btn btn-primary button-learn-more">Детальніше</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

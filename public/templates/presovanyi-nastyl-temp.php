@@ -1,3 +1,38 @@
+<style>
+    @media (max-width: 768px) {
+        .carousel-inner .carousel-item > div {
+            display: none;
+        }
+        .carousel-inner .carousel-item > div:first-child {
+            display: block;
+        }
+    }
+
+    .carousel-inner .carousel-item.active,
+    .carousel-inner .carousel-item-next,
+    .carousel-inner .carousel-item-prev {
+        display: flex;
+    }
+
+    /* display 3 */
+    @media (min-width: 768px) {
+        
+        .carousel-inner .carousel-item-right.active,
+        .carousel-inner .carousel-item-next {
+            transform: translateX(33.333%);
+        }
+        
+        .carousel-inner .carousel-item-left.active, 
+        .carousel-inner .carousel-item-prev {
+            transform: translateX(-33.333%);
+        }
+    }
+
+    .carousel-inner .carousel-item-right,
+    .carousel-inner .carousel-item-left{ 
+        transform: translateX(0);
+    }
+</style>
 <main id="main">
 
     <!-- Breadcrumbs -->
@@ -40,10 +75,9 @@
                         <h1>Пресований решітчастий настил</h1>
                         <div class="testimonial-item mb-0">
                             <p style="padding-bottom: 35px;">
-                                <i class="bi bi-quote quote-icon-left"></i>
+                                <i class="bi bi-info-circle quote-icon-left"></i>
                                 Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
                                 quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                                <i class="bi bi-quote quote-icon-right"></i>
                             </p>
                         </div>
 
@@ -66,6 +100,34 @@
                         Цей вид грат не поступається зварним решіткам за міцністю, але має свою перевагу у випадках, коли важливі естетичні характеристики конструкції. 
                         Грати можуть постачатися як з антикорозійним покриттям, так і без нього. У нас ви можете придбати недорогу сталеву підлогу.
                     </p>
+                </div>
+            </div>
+
+            <div class="text-center my-3">
+                <h1>Інші товари</h1>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="<?= PATH_ASSETS; ?>img/welded-grid-decing.jpg" class="card-img-top img-fluid" alt="<?= $page['all']['zvarnyi-nastyl']['title']; ?>" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $page['all']['zvarnyi-nastyl']['title']; ?></h5>
+                                <div class="text-right">
+                                    <a href="/zvarnyi-nastyl" class="btn btn-primary button-learn-more">Детальніше</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src="<?= PATH_ASSETS; ?>img/step.jpg" class="card-img-top img-fluid" alt="<?= $page['all']['skhodynky']['title']; ?>" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $page['all']['skhodynky']['title']; ?></h5>
+                                <div class="text-right">
+                                    <a href="/skhodynky" class="btn btn-primary button-learn-more">Детальніше</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

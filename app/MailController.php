@@ -33,7 +33,7 @@ class MailController
             }
         }
 
-        if ($sentResult === true) {
+        if ($sentResult) {
             echo "Ваш запит було надіслано. Найближчим часом з Вами зв'яжеться оператор";
             $this->sendTgMessage($tgMessage);
 

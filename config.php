@@ -47,16 +47,23 @@ $settings = [
             'product'     => false
         ],
         'zvarnyi-nastyl' => [
-            'title'       => 'Зварний решітчастий настил',
+            'title'       => 'Зварний настил',
             'description' => '',
             'template'    => 'zvarnyi-nastyl-temp.php',
             'public'      => true,
             'product'     => true
         ],
         'presovanyi-nastyl' => [
-            'title'       => 'Пресований решітчастий настил',
+            'title'       => 'Пресований настил',
             'description' => '',
             'template'    => 'presovanyi-nastyl-temp.php',
+            'public'      => true,
+            'product'     => true
+        ],
+        'skhodynky' => [
+            'title'       => 'Сходинки',
+            'description' => '',
+            'template'    => 'skhodynky-temp.php',
             'public'      => true,
             'product'     => true
         ]

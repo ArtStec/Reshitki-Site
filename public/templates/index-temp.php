@@ -152,7 +152,7 @@
                                 <li class="col-6"><i class="bi bi-check-circle"></i> Без антикорозійного покриття</li>
                             </ul>
 
-                            <h2 class="card-title pricing-card-title mb-20">Ціна: від 1100 грн<small class="text-body-secondary fw-light">/м²</small></h2>
+                            <h2 class="card-title pricing-card-title mb-20">Ціна: від 1199 грн<small class="text-body-secondary fw-light">/м²</small></h2>
 
                             <button id="orderBtn" class="button-learn-more orderBtn">Замовити</button>
                         </div>
@@ -177,7 +177,7 @@
                                 <li class="col-6"><i class="bi bi-check-circle"></i> Без антикорозійного покриття</li>
                             </ul>
 
-                            <h2 class="card-title pricing-card-title mb-20">Ціна: від 1320 грн<small class="text-body-secondary fw-light">/м²</small></h2>
+                            <h2 class="card-title pricing-card-title mb-20">Ціна: від 1399 грн<small class="text-body-secondary fw-light">/м²</small></h2>
 
                             <button id="orderBtn" class="button-learn-more orderBtn">Замовити</button>
                         </div>
